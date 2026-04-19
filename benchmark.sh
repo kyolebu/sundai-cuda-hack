@@ -9,7 +9,7 @@ if conda info --envs 2>/dev/null | grep -q "$ENV_NAME"; then
     eval "$(conda shell.bash hook)"
     conda activate "$ENV_NAME"
 else
-    echo "ERROR: Conda environment '$ENV_NAME' not found. Run ./setup.sh first."
+    echo "ERROR: Conda environment '$ENV_NAME' not found. Run 'conda activate cuda-challenge' first."
     exit 1
 fi
 

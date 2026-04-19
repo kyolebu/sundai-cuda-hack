@@ -1,14 +1,6 @@
 # Getting Started
 
-## 1. Environment Setup
-
-```bash
-./setup.sh
-```
-
-This creates a conda environment `cuda-challenge` with Python 3.11, PyTorch, ninja, and numpy.
-
-## 2. Download Benchmark Data
+## 1. Download Benchmark Data
 
 ```bash
 python download_data.py
@@ -25,7 +17,7 @@ The 4 target GEMM shapes:
   ff_down           4096 x  3072 x 12288
 ```
 
-## 3. Run the Benchmark
+## 2. Run the Benchmark
 
 ```bash
 ./benchmark.sh
@@ -33,7 +25,7 @@ The 4 target GEMM shapes:
 
 This compiles your CUDA kernels, runs correctness checks (per-layer cosine thresholds), and reports throughput in TOPs. On a fresh start with the naive kernel you should see ~1.1 TOPs GEMM and 1.00x speedup on an RTX A6000.
 
-## 4. Edit Your Solution
+## 3. Edit Your Solution
 
 You submit two files:
 
@@ -54,7 +46,7 @@ def quantize_weights(weight: torch.Tensor, group_size: int = 64) -> dict:
     #           "group_size": int}
 ```
 
-## 5. Choose a Starting Point
+## 4. Choose a Starting Point
 
 Two reference GEMM kernels are provided in `reference/`:
 

@@ -65,7 +65,6 @@ cuda-challenge/
   download_data.py      # Downloads benchmark tensors from Hugging Face
   benchmark.py          # Correctness + performance measurement
   benchmark.sh          # Entry point for benchmarking
-  setup.sh              # One-time conda env setup
   reference/
     quantize.py         # Reference offline weight quantization (read-only)
     quantize_int4.cu    # Naive SIMT quantization kernel (read-only)
